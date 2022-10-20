@@ -1,0 +1,42 @@
+@media (max-width: 730px) {
+    :root {
+        --padding-general: 10%;
+    }
+
+    .title__network__container {
+        display: flex;
+        justify-content: center;
+    }
+
+    .title__network {
+        padding: 1rem 1rem;
+        width: 80%;
+    }
+
+    .experience {
+        padding: 2.5rem var(--padding-general) 0;
+    }
+    .experience__description {
+        margin: .5rem 0 4rem;
+    }
+}
+
+
+@media screen and (min-width: 730px) {
+    :root {
+        --padding-general: 25%;
+    }
+
+    .menu__container {
+        padding: 0 25%;
+    }
+
+    .menu__list__item a {
+        padding: 17px 8px;
+    }
+
+    .experience__description {
+        display: flex;
+        margin: .5rem 0 2rem;
+    }
+}

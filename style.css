@@ -1,0 +1,288 @@
+:root {
+    --color-de-fondo: #040c20;
+    /* fdfdfd */
+    --color-de-fondo2: #F5F5F5;
+    --color-de-fondo3: #EAF2FD;
+    --color-blanco: #fff;
+    --cor-de-link: #000;
+
+    --amarillo: #e8ff00;
+    --azul-oscuro: #040c20;
+    --color-de-texto: #fdfdfd;
+
+    ----padding-general: 10%;
+    --iconos: rgba(4, 12, 32, 1)
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-family: 'Nunito', sans-serif;
+    line-height: 1.5;
+    margin: 0 auto;
+    scroll-behavior: smooth;
+}
+
+ol,
+ul,
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* PREDEFINIDOS */
+.title_a {
+    font-size: 1.5rem;
+    margin: 3rem 0 2rem;
+}
+
+.card {
+    width: 140px;
+    height: 140px;
+    padding: .5rem;
+    background-color: var(--amarillo);
+    margin-bottom: 2rem;
+    color: var(--azul-oscuro);
+    font-weight: bold;
+}
+
+/*/// SECCIÓN TÍTULO ///*/
+.title {
+    display: grid;
+    grid-template-rows: auto auto;
+    /* gap: 2rem; */
+    align-items: center;
+    margin: 0 auto;
+    font-family: 'Roboto Slab', serif;
+    color: var(--color-blanco);
+    background-color: var(--color-de-fondo);    
+    padding: 2.5rem var(--padding-general);
+
+    /* background: url(./assets/background_nb-azul.jpg) center no-repeat; */
+    /* filter: hue-rotate(90deg); */
+    /* background-size: cover; */
+}
+
+/* .title::before {
+    content: "";
+    width: 100%;
+    height: calc(100% - 6.5%);
+    position: absolute;
+    left: 0;
+    background: linear-gradient(rgba(0, 0, 255, 0)50%, var(--amarillo));
+} */
+
+.title__bio {
+    margin-bottom: 2rem;
+    padding-top: 3rem;
+    font-size: 1.8rem;
+    font-weight: 400;
+}
+
+.title__subsection {
+    margin-bottom: 3rem;
+    font-weight: 400;
+}
+
+.title__network {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: red;
+    padding: 1rem;
+    border-radius: 20px;
+    transform: rotate(-3deg);
+    justify-content: space-between;
+    margin-bottom: 2rem;
+}
+
+.title__network__item {
+    color: var(--color-blanco);
+    margin-right: 1rem;
+}
+.title__network__item::after {
+    content: " 🡥";
+}
+
+.title__photo {
+    display: none;
+    background: url(./assets/profile.png) center / cover;
+    width: 300px;
+    height: 300px;
+}
+
+/*/// SECCIÓN SOBRE MÍ ///*/
+.about__container {
+    padding: 2.5rem var(--padding-general);
+    background-color: var(--color-de-fondo3);
+}
+
+.about__paragraphs {
+    margin-bottom: 2rem;
+}
+
+.about__paragraph {
+    margin-bottom: .5rem;
+}
+
+.about__paragraph-bold {
+    background-color: var(--azul-oscuro);
+    color: var(--color-blanco);
+    font-weight: bold;
+}
+
+/*/// SECCIÓN SKILLS ///*/
+.skills {
+    padding: 2.5rem var(--padding-general) 0;
+    background-color: var(--azul-oscuro);
+    color: var(--color-blanco);
+}
+
+.skills__container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    gap: 1rem;
+}
+
+/*/// SECCIÓN HOBBIES ///*/
+.hobbies {
+    padding: 2.5rem var(--padding-general);
+    background-color: var(--azul-oscuro);
+    color: var(--color-blanco);
+}
+
+.hobbies__container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    gap: 1rem;
+}
+
+/*/// SECCIÓN FORMACIÓN ACADÉMICA ///*/
+.academic {
+    padding: 2.5rem var(--padding-general);
+    background-color: var(--color-de-fondo3);
+}
+
+.academic__container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    gap: 1rem;
+}
+
+.academic__courses__box {
+    width: 220px;
+    min-width: 220px;
+    background-color: var(--color-blanco);
+    margin-bottom: 2rem;
+    padding: .5rem;    
+}
+
+.academic__courses__box img {
+    width: 100%;
+    margin: .5rem 0 1rem;
+}
+
+/*/// SECCIÓN EXPERIENCIA PROFESIONAL ///*/
+.experience {
+    padding: 2.5rem var(--padding-general);
+    background-color: var(--azul-oscuro);
+    color: var(--color-blanco);
+}
+
+.experiencie__card {
+    display: flex;
+    flex-direction: column;
+}
+
+.experience__img {
+    max-width: 750px;
+    margin-bottom: .5rem;
+}
+
+.experience__description {
+    display: flex;
+    margin: .5rem 0 2.5rem;
+}
+
+.experience__btn {
+    width: 120px;
+    text-align: center;
+    font-weight: bold;
+    background-color: red;
+    color: var(--color-blanco);
+    border-radius: 5px;
+    padding: .5rem;
+    margin-right: 1rem;
+}
+
+/*/// SECCIÓN CONTACTO ///*/
+.formcontato__contacto {
+    padding: 2.5rem var(--padding-general);
+    display: flex;
+    /* gap: 2rem; */
+    background: var(--color-de-fondo3);
+}
+
+.formcontato__img {
+    display: none;
+    width: 300px;
+}
+
+.formcontato__form {
+    display: flex;
+    flex-direction: column;
+    margin: 1rem 0;
+    max-width: 750px;
+}
+
+.formcontato__input {
+    margin-bottom: .5rem;
+    height: 2rem;
+    padding: .5rem;
+    font-family: 'Tahoma', Verdana, sans-serif;
+}
+.formcontato__message{
+    height: 7rem;
+    outline: none;
+}
+.formcontato__btn {
+    height: 2rem;
+    background-color: red;
+    border: none;
+    border-radius: 5px;
+    color: var(--color-blanco);
+}
+
+
+
+/*/// SECCIÓN FOOTER ///*/
+.footer__rodape {
+    padding: .5rem 1rem;
+    text-align: end;
+    font-size: .8rem;
+    color: var(--color-blanco);
+    background-color: var(--azul-oscuro);
+}
+
+/* Vamos a desafiarnos trabajando con responsividad?
+Utiliza las referencias de los breakpoints @media abajo */
+
+
+/*Tablet*/
+@media (min-width: 768px) {
+
+}
+
+/*Mobile*/
+@media (min-width: 425px) {
+
+}
