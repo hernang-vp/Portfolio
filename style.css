@@ -272,17 +272,3 @@ a {
     color: var(--color-blanco);
     background-color: var(--azul-oscuro);
 }
-
-/* Vamos a desafiarnos trabajando con responsividad?
-Utiliza las referencias de los breakpoints @media abajo */
-
-
-/*Tablet*/
-@media (min-width: 768px) {
-
-}
-
-/*Mobile*/
-@media (min-width: 425px) {
-
-}

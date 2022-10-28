@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="./style.css">
     <link rel="stylesheet" href="./navbar.css">
     <link rel="stylesheet" href="./media-query.css">
+    <link rel="shortcut icon" href="./assets/favicon.png" type="image/x-icon">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -38,21 +39,20 @@
 
     <!-- Sección del Header/Title/Hero -->
     <section class="title">
-            <div class="title__container">
-                <h2 class="title__bio">Hola, mi nombre es Hernán Vildoza Parra y construyo paginas web</h2>
-                <h3 class="title__subsection">Estudio HTML5, CSS3 y Javascript y actualmente estoy participando del
-                    proyecto Oracle ONE en Alura Latam.</h3>
-                <div class="title__network__container">
-                    <ul class="title__network">
-                        <li><a class="title__network__item" href="https://github.com/hernang-vp">Github</a></li>
-                        <li><a class="title__network__item" href="https://www.linkedin.com/feed/">Linkedin</a></li>
-                        <li><a class="title__network__item"
-                                href="https://www.instagram.com/gato__gato__gato/">Instagram</a>
-                        </li>
-                        <li><a class="title__network__item" href="">Currículo</a></li>
-                    </ul>
-                </div>
+        <div class="title__container">
+            <h2 class="title__bio">Hola, mi nombre es Hernán Vildoza Parra y construyo paginas web</h2>
+            <h3 class="title__subsection">Estudio HTML5, CSS3 y Javascript y actualmente estoy participando del
+                proyecto Oracle ONE en Alura Latam.</h3>
+            <div class="title__network__container">
+                <ul class="title__network">
+                    <li><a class="title__network__item" href="https://github.com/hernang-vp">Github</a></li>
+                    <li><a class="title__network__item" href="https://www.linkedin.com/feed/">Linkedin</a></li>
+                    <li><a class="title__network__item" href="https://www.instagram.com/gato__gato__gato/">Instagram</a>
+                    </li>
+                    <li><a class="title__network__item" onclick="genPDF()" href="">Currículo</a></li>
+                </ul>
             </div>
+        </div>
         <div class="title__photo"></div>
     </section>
 
@@ -273,14 +273,15 @@
                 <h3 class="formcontato__subtext">¿Quieres contactarme?</h3>
                 <h3 class="formcontato__subtext">Complete el siguiente formulario y me pondré en contacto con
                     usted lo antes posible. </h3>
-                <form class="formcontato__form" name="form">
-                    <input class="formcontato__input" type="text" name="nombre" placeholder="Nombre" required
-                        maxlength="50">
-                    <input class="formcontato__input" type="email" name="email" placeholder="E-mail" required>
-                    <input class="formcontato__input" type="text" name="asunto" placeholder="Assunto">
-                    <textarea class="formcontato__input formcontato__message" rows="5" cols="40" id="message"
+
+                <form class="formcontato__form" id="form" name="form">
+                    <input class="formcontato__input" id="nombre" type="text" name="nombre" placeholder="Nombre">
+                    <input class="formcontato__input" id="email" type="email" name="email" placeholder="E-mail">
+                    <input class="formcontato__input" id="asunto" type="text" name="asunto" placeholder="Asunto">
+                    <textarea class="formcontato__input formcontato__message" id="mensaje" rows="5" cols="40" id="message"
                         name="mensaje" placeholder="Mensaje"></textarea>
                     <button type="submit" class="formcontato__input formcontato__btn">Enviar mensaje</button>
+                    <div id="error"></div>
                 </form>
             </div>
         </div>
@@ -292,7 +293,11 @@
     </section>
 
     <!-- Script del documento JavaScript -->
-    <script src="validacion.js"></script>
+    <script src="./validacion.js"></script>
+
+
+    <script type="text/javascript" src="html2canvas.js"></script>
+    <script type="text/javascript" src="jspdf.min.js"></script>
 </body>
 
 </html>
